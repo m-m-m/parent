@@ -377,15 +377,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
-      	<configuration>
-      	</configuration>
-        <dependencies>
-          <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>mmm-setup</artifactId>
-            <version>dev</version>
-          </dependency>
-        </dependencies>
       </plugin>
       <!-- genercate jacoco coverage report-->
       <plugin>
