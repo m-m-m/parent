@@ -16,7 +16,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <com.google.gwt.version>2.7.0</com.google.gwt.version>
-    <jacoco.version>0.7.4.201502262128</jacoco.version>
+    <jacoco.version>0.8.0</jacoco.version>
+    <org.slf4j.version>1.7.21</org.slf4j.version>
+    <ch.qos.logback.version>1.2.3</ch.qos.logback.version>
     <mmm.flatten.mode>oss</mmm.flatten.mode>
     <mmm.repository>parent</mmm.repository>
   </properties>
@@ -44,6 +46,26 @@
         <groupId>com.google.gwt</groupId>
         <artifactId>gwt-servlet</artifactId>
         <version>${com.google.gwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>3.9.1</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${org.slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${ch.qos.logback.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -261,6 +283,11 @@
             </lifecycleMappingMetadata>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.owasp</groupId>
+          <artifactId>dependency-check-maven</artifactId>
+          <version>3.1.1</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -359,20 +386,16 @@
         <executions>
           <execution>
             <id>default-prepare-agent</id>
-            <phase>pre-site</phase>
             <goals>
               <goal>prepare-agent</goal>
             </goals>
           </execution>
-          <!--
           <execution>
             <id>default-report</id>
-            <phase>prepare-package</phase>
             <goals>
               <goal>report</goal>
             </goals>
           </execution>
-          -->
         </executions>
       </plugin>
       <!-- site generation settings-->
@@ -494,10 +517,26 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- https://github.com/jeremylong/DependencyCheck/issues/386 -->
+              <!-- <report>aggregate</report> -->
+              <report>check</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <!-- https://github.com/cobertura/cobertura/issues/176 -->
+      <!--
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>javancss-maven-plugin</artifactId>
         <version>2.1</version>
       </plugin>
+      -->
      </plugins>
   </reporting>
 
@@ -552,33 +591,34 @@
       </build>
     </profile>
     <profile>
-      <id>mmm.no.manual.tests</id>
-      <activation>
-        <property>
-          <name>env.CI</name>
-          <value>true</value>
-        </property>
-      </activation>      
+      <id>security</id>
       <build>
         <plugins>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
             <configuration>
-              <excludedGroups>net.sf.mmm.test.TestCategoryManual</excludedGroups>
+              <failBuildOnCVSS>8</failBuildOnCVSS>
             </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
           </plugin>
         </plugins>
-      </build>      
-    </profile>
+      </build>
+    </profile>    
   </profiles>
   <issueManagement>
     <system>GitHub</system>
     <url>http://github.com/m-m-m/${mmm.repository}/issues</url>
   </issueManagement>
   <scm>
-    <connection>scm:git:git@github.com:m-m-m/${mmm.repository}.git</connection>
-    <developerConnection>scm:git:git@github.com:m-m-m/${mmm.repository}.git</developerConnection>
+    <connection>scm:git:https://github.com/m-m-m/${mmm.repository}.git</connection>
+    <developerConnection>scm:git:https://github.com/m-m-m/${mmm.repository}.git</developerConnection>
     <url>https://github.com/m-m-m/${mmm.repository}/tree/master</url>
     <tag/>
   </scm>
