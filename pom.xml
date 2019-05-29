@@ -102,7 +102,7 @@
             <charset>${project.build.sourceEncoding}</charset>
             <docfilessubdirs>true</docfilessubdirs>
             <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
-            <additionalparam>-Xdoclint:none</additionalparam>
+            <doclint>none</doclint>
             <links>
               <link>http://docs.oracle.com/javase/8/docs/api/</link>
               <link>http://m-m-m.sourceforge.net/apidocs/</link>
@@ -412,7 +412,7 @@
           <charset>${project.build.sourceEncoding}</charset>
           <docfilessubdirs>true</docfilessubdirs>
           <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
-          <additionalparam>-Xdoclint:none -source ${java.version}</additionalparam>
+          <doclint>none</doclint>
           <links>
             <link>http://docs.oracle.com/javase/8/docs/api/</link>
             <link>http://m-m-m.sourceforge.net/apidocs/</link>
