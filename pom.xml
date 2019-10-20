@@ -617,8 +617,8 @@
 
   <licenses>
     <license>
-      <name>Apache Software License</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <name>Apache Software License, Version 2.0</name>
+      <url>https://github.com/m-m-m/${mmm.repository}/blob/master/LICENSE</url>
       <distribution>repro</distribution>
       <comments/>
     </license>
