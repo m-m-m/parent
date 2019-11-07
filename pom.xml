@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>net.sf.m-m-m</groupId>
+  <groupId>io.github.m-m-m</groupId>
   <artifactId>mmm</artifactId>
   <version>2.8.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <description>Mature Modular Meta-Framework (MMM) is a generic and modular meta-framework to build applications.</description>
-  <url>http://m-m-m.sourceforge.net/</url>
+  <url>https://m-m-m.github.io/</url>
   <inceptionYear>2001</inceptionYear>
 
   <properties>
@@ -120,8 +120,8 @@
             <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
             <doclint>none</doclint>
             <links>
-              <link>http://docs.oracle.com/javase/8/docs/api/</link>
-              <link>http://m-m-m.sourceforge.net/apidocs/</link>
+              <link>https://docs.oracle.com/javase/8/docs/api/</link>
+              <link>https://m-m-m.github.io/apidocs/</link>
             </links>
             <doctitle>JavaDocs for ${project.name} ${project.version}</doctitle>
             <windowtitle>JavaDocs for ${project.name} ${project.version}</windowtitle>
@@ -399,8 +399,8 @@
           <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
           <doclint>none</doclint>
           <links>
-            <link>http://docs.oracle.com/javase/8/docs/api/</link>
-            <link>http://m-m-m.sourceforge.net/apidocs/</link>
+            <link>https://docs.oracle.com/javase/8/docs/api/</link>
+            <link>https://m-m-m.github.io/apidocs/</link>
           </links>
           <doctitle>JavaDocs for ${project.name} ${project.version}</doctitle>
           <windowtitle>JavaDocs for ${project.name} ${project.version}</windowtitle>
@@ -528,7 +528,7 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>http://github.com/m-m-m/${mmm.repository}/issues</url>
+    <url>https://github.com/m-m-m/${mmm.repository}/issues</url>
   </issueManagement>
 
   <scm>
@@ -556,20 +556,9 @@
     </site>
   </distributionManagement>
 
-  <mailingLists>
-    <mailingList>
-      <name>mmm-devel</name>
-      <subscribe>http://lists.sourceforge.net/lists/listinfo/m-m-m-devel</subscribe>
-      <unsubscribe>http://lists.sourceforge.net/lists/listinfo/m-m-m-devel</unsubscribe>
-      <post>m-m-m-devel@lists.sourceforge.net</post>
-      <archive>http://sourceforge.net/mailarchive/forum.php?forum=m-m-m-devel</archive>
-      <otherArchives/>
-    </mailingList>
-  </mailingLists>
-
   <organization>
     <name>mmm-Team</name>
-    <url>http://m-m-m.sourceforge.net/team-list.html</url>
+    <url>https://github.com/m-m-m</url>
   </organization>
 
   <developers>
