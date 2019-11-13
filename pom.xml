@@ -549,8 +549,7 @@
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
       <name>MMM Snapshot Repository</name>
-      <!--<url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
-      <url>file://${user.dir}/target/snapshots/</url>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
     <site>
       <id>m-m-m.sf.net</id>
