@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.m-m-m</groupId>
   <artifactId>mmm</artifactId>
-  <version>4</version>
+  <version>5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <description>Mature Modular Meta-Framework (MMM) is a generic and modular meta-framework to build applications.</description>
