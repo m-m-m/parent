@@ -21,8 +21,6 @@
     <mmm.repository>parent</mmm.repository>
     <mmm.deploy.release.repository>https://oss.sonatype.org/service/local/staging/deploy/maven2/</mmm.deploy.release.repository>
     <mmm.deploy.snapshot.repository>https://oss.sonatype.org/content/repositories/snapshots/</mmm.deploy.snapshot.repository>
-    <javadoc.url.java>https://docs.oracle.com/en/java/javase/${java.version}/docs/api/</javadoc.url.java>
-    <javadoc.url.mmm>https://m-m-m.github.io/docs/api</javadoc.url.mmm>
   </properties>
 
   <dependencies>
@@ -119,15 +117,12 @@
             <!--<maxmemory>5048m</maxmemory>-->
             <notree>true</notree>
             <show>protected</show>
+            <source>${java.version}</source>
             <encoding>${project.reporting.outputEncoding}</encoding>
             <charset>${project.build.sourceEncoding}</charset>
             <docfilessubdirs>true</docfilessubdirs>
             <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
             <doclint>none</doclint>
-            <links>
-              <link>${javadoc.url.java}</link>
-              <link>${javadoc.url.mmm}</link>
-            </links>
             <doctitle>JavaDocs for ${project.name} ${project.version}</doctitle>
             <windowtitle>JavaDocs for ${project.name} ${project.version}</windowtitle>
           </configuration>
@@ -403,10 +398,6 @@
           <docfilessubdirs>true</docfilessubdirs>
           <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
           <doclint>none</doclint>
-          <links>
-            <link>${javadoc.url.java}</link>
-            <link>${javadoc.url.mmm}</link>
-          </links>
           <doctitle>JavaDocs for ${project.name} ${project.version}</doctitle>
           <windowtitle>JavaDocs for ${project.name} ${project.version}</windowtitle>
         </configuration>
