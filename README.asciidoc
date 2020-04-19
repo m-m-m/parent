@@ -6,3 +6,11 @@ image:https://img.shields.io/github/license/m-m-m/parent.svg?label=License["Apac
 image:https://img.shields.io/maven-central/v/io.github.m-m-m/mmm.svg?label=Maven%20Central["Maven Central",link=https://search.maven.org/search?q=g:io.github.m-m-m]
 
 Contains the parent POM of this entire project.
+Has to be installed or deployed with maven option `-Dmmm.flatten.updatePom=false`:
+```
+mvn clean deploy -Pdeploy -Dmmm.flatten.updatePom=false
+```
+Or even better:
+```
+devon release -Dmmm.flatten.updatePom=false
+```
