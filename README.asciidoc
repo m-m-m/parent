@@ -1,8 +1,10 @@
-image:https://raw.github.com/m-m-m/mmm/master/src/site/resources/images/logo.png[logo,link="https://m-m-m.github.io"]
-
-= mmm
+image:https://m-m-m.github.io/logo.svg[logo,width="150",link="https://m-m-m.github.io"]
 
 image:https://img.shields.io/github/license/m-m-m/parent.svg?label=License["Apache License, Version 2.0",link=https://github.com/m-m-m/parent/blob/master/LICENSE]
+image:https://travis-ci.com/m-m-m/parent.svg?branch=master["build-status",link="https://travis-ci.com/m-m-m/parent"]
+
+= mmm (Parent)
+
 image:https://img.shields.io/maven-central/v/io.github.m-m-m/mmm.svg?label=Maven%20Central["Maven Central",link=https://search.maven.org/search?q=g:io.github.m-m-m]
 
 Contains the parent POM of this entire project.
