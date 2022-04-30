@@ -22,9 +22,11 @@
     <assertj.version>3.19.0</assertj.version>
     <mmm.flatten.mode>bom</mmm.flatten.mode>
     <mmm.flatten.updatePom>true</mmm.flatten.updatePom>
-    <mmm.repository>parent</mmm.repository>
-    <mmm.deploy.release.repository>https://oss.sonatype.org/service/local/staging/deploy/maven2/</mmm.deploy.release.repository>
-    <mmm.deploy.snapshot.repository>https://oss.sonatype.org/content/repositories/snapshots/</mmm.deploy.snapshot.repository>
+    <githuib.organization>m-m-m</githuib.organization>
+    <githuib.repository>parent</githuib.repository>
+	<github.default.branch>master</github.default.branch>
+	<maven.deploy.release.repository>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</maven.deploy.release.repository>
+    <maven.deploy.snapshot.repository>https://s01.oss.sonatype.org/content/repositories/snapshots/</maven.deploy.snapshot.repository>
 
     <maven.archetype.version>3.1.2</maven.archetype.version>
     <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
@@ -591,13 +593,13 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/m-m-m/${mmm.repository}/issues</url>
+    <url>https://github.com/${githuib.organization]/${githuib.repository}/issues</url>
   </issueManagement>
 
   <scm child.scm.connection.inherit.append.path="false" child.scm.developerConnection.inherit.append.path="false" child.scm.url.inherit.append.path="false">
-    <connection>scm:git:https://github.com/m-m-m/${mmm.repository}.git</connection>
-    <developerConnection>scm:git:https://github.com/m-m-m/${mmm.repository}.git</developerConnection>
-    <url>https://github.com/m-m-m/${mmm.repository}/tree/master</url>
+    <connection>scm:git:https://github.com/${githuib.organization]/${githuib.repository}.git</connection>
+    <developerConnection>scm:git:https://github.com/${githuib.organization]/${githuib.repository}.git</developerConnection>
+    <url>https://github.com/${githuib.organization]/${githuib.repository}/tree/${github.default.branch]</url>
     <tag/>
   </scm>
 
@@ -605,12 +607,12 @@
     <repository>
       <id>deploy</id>
       <name>MMM Staging Repository</name>
-      <url>${mmm.deploy.release.repository}</url>
+      <url>${maven.deploy.release.repository}</url>
     </repository>
     <snapshotRepository>
       <id>deploy</id>
       <name>mmm snapshot repository</name>
-      <url>${mmm.deploy.snapshot.repository}</url>
+      <url>${maven.deploy.snapshot.repository}</url>
     </snapshotRepository>
     <site child.site.url.inherit.append.path="false">
       <id>mmm-site</id>
@@ -620,7 +622,7 @@
 
   <organization>
     <name>mmm-team</name>
-    <url>https://m-m-m.github.io</url>
+    <url>https://${githuib.organization].github.io</url>
   </organization>
 
   <developers>
@@ -669,7 +671,7 @@
   <licenses>
     <license>
       <name>Apache Software License, Version 2.0</name>
-      <url>https://github.com/m-m-m/${mmm.repository}/blob/master/LICENSE</url>
+      <url>https://github.com/${githuib.organization]/${githuib.repository}/blob/${github.default.branch]/LICENSE</url>
       <distribution>repro</distribution>
       <comments/>
     </license>
