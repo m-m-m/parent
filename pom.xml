@@ -579,7 +579,7 @@
         <repository>
           <id>ossrh</id>
           <name>OSSRH Snapshots</name>
-          <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+          <url>${maven.deploy.snapshot.repository}</url>
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
