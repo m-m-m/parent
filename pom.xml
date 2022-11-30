@@ -24,10 +24,9 @@
     <mmm.flatten.updatePom>true</mmm.flatten.updatePom>
     <githuib.organization>m-m-m</githuib.organization>
     <githuib.repository>parent</githuib.repository>
-	<github.default.branch>master</github.default.branch>
-	<maven.deploy.release.repository>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</maven.deploy.release.repository>
+    <github.default.branch>master</github.default.branch>
+    <maven.deploy.release.repository>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</maven.deploy.release.repository>
     <maven.deploy.snapshot.repository>https://s01.oss.sonatype.org/content/repositories/snapshots/</maven.deploy.snapshot.repository>
-
     <maven.archetype.version>3.1.2</maven.archetype.version>
     <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
     <maven.compiler.plugin.version>3.9.0</maven.compiler.plugin.version>
