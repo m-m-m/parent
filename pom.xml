@@ -13,6 +13,16 @@
   <inceptionYear>2001</inceptionYear>
 
   <properties>
+    <!--
+      Actual repositories with code will inherit from this POM and use revision as default version for development and CI
+      builds. CI will also deploy them to nexus where users can always test the latest successful build versions using this
+      magic version.
+      To workaround a bug in Java module system when adding JARs to class- or modulepath this version number has to carry
+      at least two dot separated digits (so dev-SNAPSHOT or 0-SNAPSHOT was not working causing that Java bug):
+      https://github.com/m-m-m/cli/issues/1
+      For real releases the revision will be overridden as commandline argument -Drevision=...
+    -->
+    <revision>0.0-SNAPSHOT</revision>
     <java.version>11</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -25,8 +35,9 @@
     <githuib.organization>m-m-m</githuib.organization>
     <githuib.repository>parent</githuib.repository>
     <github.default.branch>master</github.default.branch>
-    <maven.deploy.release.repository>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</maven.deploy.release.repository>
-    <maven.deploy.snapshot.repository>https://s01.oss.sonatype.org/content/repositories/snapshots/</maven.deploy.snapshot.repository>
+    <maven.deploy.repository>https://s01.oss.sonatype.org</maven.deploy.repository>
+    <maven.deploy.release.repository>${maven.deploy.repository}/service/local/staging/deploy/maven2/</maven.deploy.release.repository>
+    <maven.deploy.snapshot.repository>${maven.deploy.repository}/content/repositories/snapshots/</maven.deploy.snapshot.repository>
     <maven.archetype.version>3.1.2</maven.archetype.version>
     <maven.resources.plugin.version>3.3.0</maven.resources.plugin.version>
     <maven.compiler.plugin.version>3.9.0</maven.compiler.plugin.version>
