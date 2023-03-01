@@ -26,10 +26,9 @@
     <java.version>11</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <jacoco.version>0.8.8</jacoco.version>
     <logback.version>1.4.5</logback.version>
-    <junit.version>5.9.1</junit.version>
-    <assertj.version>3.23.1 </assertj.version>
+    <junit.version>5.9.2</junit.version>
+    <assertj.version>3.24.2 </assertj.version>
     <mmm.flatten.mode>bom</mmm.flatten.mode>
     <mmm.flatten.updatePom>true</mmm.flatten.updatePom>
     <githuib.organization>m-m-m</githuib.organization>
@@ -40,37 +39,24 @@
     <maven.deploy.snapshot.repository>${maven.deploy.repository}/content/repositories/snapshots/</maven.deploy.snapshot.repository>
     <maven.archetype.version>3.1.2</maven.archetype.version>
     <maven.resources.plugin.version>3.3.0</maven.resources.plugin.version>
-    <maven.compiler.plugin.version>3.9.0</maven.compiler.plugin.version>
+    <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
     <maven.install.plugin.version>3.1.0</maven.install.plugin.version>
-    <maven.deploy.plugin.version>3.0.0</maven.deploy.plugin.version>
+    <maven.deploy.plugin.version>3.1.0</maven.deploy.plugin.version>
     <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
     <maven.jar.plugin.version>3.3.0</maven.jar.plugin.version>
     <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
-    <maven.site.plugin.version>3.9.1</maven.site.plugin.version>
-    <maven.checkstyle.plugin.version>3.2.0</maven.checkstyle.plugin.version>
-    <maven.changes.plugin.version>2.12.1</maven.changes.plugin.version>
-    <maven.changelog.plugin.version>2.3</maven.changelog.plugin.version>
-    <maven.project.info.reports.plugin.version>3.4.1</maven.project.info.reports.plugin.version>
-    <maven.jxr.plugin.version>3.3.0</maven.jxr.plugin.version>
-    <maven.javadoc.plugin.version>3.4.1</maven.javadoc.plugin.version>
+    <maven.javadoc.plugin.version>3.5.0</maven.javadoc.plugin.version>
     <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
-    <maven.surefire.report.plugin.version>2.22.2</maven.surefire.report.plugin.version>
-    <maven.pmd.plugin.version>3.9.0</maven.pmd.plugin.version>
     <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
-    <maven.antrun.plugin.version>3.1.0</maven.antrun.plugin.version>
     <maven.help.plugin.version>3.3.0</maven.help.plugin.version>
     <maven.gpg.plugin.version>3.0.1</maven.gpg.plugin.version>
-    <mojo.taglist.plugin.version>2.4</mojo.taglist.plugin.version>
-    <mojo.cobertura.plugin.version>2.7</mojo.cobertura.plugin.version>
     <mojo.flatten.plugin.version>1.3.0</mojo.flatten.plugin.version>
     <!-- https://github.com/mojohaus/license-maven-plugin/issues/358 -->
     <mojo.license.plugin.version>2.0.0</mojo.license.plugin.version>
     <mojo.servicedocgen.plugin.version>1.0.0-beta-6</mojo.servicedocgen.plugin.version>
     <mojo.exec.plugin.version>3.1.0</mojo.exec.plugin.version>
     <sonar.maven.plugin.version>3.9.1.2184</sonar.maven.plugin.version>
-    <jacoco.maven.plugin.version>${jacoco.version}</jacoco.maven.plugin.version>
-    <owasp.dependency.check.plugin.version>7.4.3</owasp.dependency.check.plugin.version>
-    <spotbugs.plugin.version>4.7.3.0</spotbugs.plugin.version>
+    <owasp.dependency.check.plugin.version>8.1.2</owasp.dependency.check.plugin.version>
   </properties>
 
   <dependencies>
@@ -135,36 +121,6 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>${maven.site.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>${maven.checkstyle.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-changes-plugin</artifactId>
-          <version>${maven.changes.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-changelog-plugin</artifactId>
-          <version>${maven.changelog.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>${maven.project.info.reports.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jxr-plugin</artifactId>
-          <version>${maven.jxr.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${maven.javadoc.plugin.version}</version>
           <configuration>
@@ -194,26 +150,8 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>${maven.surefire.report.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-pmd-plugin</artifactId>
-          <version>${maven.pmd.plugin.version}</version>
-          <configuration>
-            <targetJdk>${java.version}</targetJdk>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>${maven.war.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>${maven.antrun.plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -224,16 +162,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
           <version>${maven.gpg.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.github.spotbugs</groupId>
-          <artifactId>spotbugs-maven-plugin</artifactId>
-          <version>${spotbugs.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>taglist-maven-plugin</artifactId>
-          <version>${mojo.taglist.plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -254,11 +182,6 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>flatten-maven-plugin</artifactId>
           <version>${mojo.flatten.plugin.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>${jacoco.maven.plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.owasp</groupId>
@@ -354,163 +277,8 @@
           <warName>${project.artifactId}</warName>
         </configuration>
       </plugin>
-
-      <!-- JaCoCo for test coverage -->
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>default-prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-report</id>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- site generation settings-->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-      </plugin>
-      <!-- genercate jacoco coverage report-->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <inherited>false</inherited>
-        <executions>
-          <execution>
-          <phase>post-site</phase>
-          <goals>
-            <goal>run</goal>
-          </goals>
-          <configuration>
-            <target>
-              <!-- Execute an ant task within maven -->
-              <echo message="Generating JaCoCo Reports" />
-              <taskdef name="report" classname="org.jacoco.ant.ReportTask">
-                <classpath path="${settings.localRepository}/org/jacoco/org.jacoco.ant/${jacoco.version}/org.jacoco.ant-${jacoco.version}.jar" />
-              </taskdef>
-              <mkdir dir="${basedir}/target/site/coverage-report" />
-              <report>
-                <executiondata>
-                  <fileset dir="${basedir}">
-                    <include name="**/target/**/jacoco.exec" />
-                  </fileset>
-                </executiondata>
-                <structure name="m-m-m project coverage">
-                  <group name="m-m-m">
-                    <classfiles>
-                      <fileset dir="${basedir}">
-                        <include name="**/target/classes/**/*.class" />
-                      </fileset>
-                    </classfiles>
-                    <sourcefiles encoding="${project.build.sourceEncoding}">
-                      <fileset dir="${basedir}">
-                        <include name="**/src/main/java/**/*.java" />
-                      </fileset>
-                    </sourcefiles>
-                  </group>
-                </structure>
-                <html destdir="${basedir}/target/site/coverage-report/html" />
-                <xml destfile="${basedir}/target/site/coverage-report/coverage-report.xml" />
-                <csv destfile="${basedir}/target/site/coverage-report/coverage-report.csv" />
-              </report>
-            </target>
-          </configuration>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>org.jacoco.ant</artifactId>
-            <version>${jacoco.version}</version>
-          </dependency>
-        </dependencies>
-      </plugin>
     </plugins>
   </build>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jxr-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <configuration>
-          <notree>true</notree>
-          <show>private</show>
-          <encoding>${project.reporting.outputEncoding}</encoding>
-          <charset>${project.build.sourceEncoding}</charset>
-          <docfilessubdirs>true</docfilessubdirs>
-          <stylesheetfile>${user.dir}/src/main/javadoc/stylesheet.css</stylesheetfile>
-          <doclint>none</doclint>
-          <doctitle>JavaDocs for ${project.name} ${project.version}</doctitle>
-          <windowtitle>JavaDocs for ${project.name} ${project.version}</windowtitle>
-        </configuration>
-        <reportSets>
-          <reportSet>
-            <id>mmm.javadoc</id>
-            <reports>
-              <report>javadoc</report>
-            </reports>
-          </reportSet>
-          <reportSet>
-            <id>mmm.javadoc.aggregate</id>
-            <reports>
-              <report>aggregate</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>taglist-maven-plugin</artifactId>
-        <configuration>
-          <tags>
-            <tag>TODO</tag>
-            <tag>@todo</tag>
-            <tag>FIXME</tag>
-            <tag>@deprecated</tag>
-          </tags>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.owasp</groupId>
-        <artifactId>dependency-check-maven</artifactId>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <!-- https://github.com/jeremylong/DependencyCheck/issues/386 -->
-              <!-- <report>aggregate</report> -->
-              <report>check</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <!-- https://github.com/cobertura/cobertura/issues/176 -->
-      <!--
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>javancss-maven-plugin</artifactId>
-        <version>2.1</version>
-      </plugin>
-      -->
-     </plugins>
-  </reporting>
 
   <profiles>
     <profile>
@@ -624,10 +392,6 @@
       <name>mmm snapshot repository</name>
       <url>${maven.deploy.snapshot.repository}</url>
     </snapshotRepository>
-    <site child.site.url.inherit.append.path="false">
-      <id>mmm-site</id>
-      <url>file://${user.dir}/target/mmm-site</url>
-    </site>
   </distributionManagement>
 
   <organization>
