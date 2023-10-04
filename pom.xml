@@ -23,39 +23,38 @@
       For real releases the revision will be overridden as commandline argument -Drevision=...
     -->
     <revision>0.0-SNAPSHOT</revision>
-    <java.version>11</java.version>
+    <java.version>17</java.version>
     <maven.compiler.fork>true</maven.compiler.fork>
     <maven.compiler.release>${java.version}</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <logback.version>1.4.5</logback.version>
-    <junit.version>5.9.2</junit.version>
+    <junit.version>5.9.3</junit.version>
     <assertj.version>3.24.2 </assertj.version>
     <mmm.flatten.mode>bom</mmm.flatten.mode>
     <mmm.flatten.updatePom>true</mmm.flatten.updatePom>
     <githuib.organization>m-m-m</githuib.organization>
     <githuib.repository>parent</githuib.repository>
     <github.default.branch>master</github.default.branch>
-    <maven.archetype.version>3.1.2</maven.archetype.version>
-    <maven.resources.plugin.version>3.3.0</maven.resources.plugin.version>
+    <maven.archetype.version>3.2.1</maven.archetype.version>
+    <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
     <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
-    <maven.install.plugin.version>3.1.0</maven.install.plugin.version>
-    <maven.deploy.plugin.version>3.1.0</maven.deploy.plugin.version>
-    <maven.clean.plugin.version>3.2.0</maven.clean.plugin.version>
+    <maven.install.plugin.version>3.1.1</maven.install.plugin.version>
+    <maven.deploy.plugin.version>3.1.1</maven.deploy.plugin.version>
+    <maven.clean.plugin.version>3.3.1</maven.clean.plugin.version>
     <maven.jar.plugin.version>3.3.0</maven.jar.plugin.version>
-    <maven.source.plugin.version>3.2.1</maven.source.plugin.version>
-    <maven.javadoc.plugin.version>3.5.0</maven.javadoc.plugin.version>
-    <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
-    <maven.war.plugin.version>3.3.2</maven.war.plugin.version>
-    <maven.help.plugin.version>3.3.0</maven.help.plugin.version>
-    <maven.gpg.plugin.version>3.0.1</maven.gpg.plugin.version>
-    <mojo.flatten.plugin.version>1.3.0</mojo.flatten.plugin.version>
-    <!-- https://github.com/mojohaus/license-maven-plugin/issues/358 -->
-    <mojo.license.plugin.version>2.0.0</mojo.license.plugin.version>
-    <mojo.servicedocgen.plugin.version>1.0.0-beta-6</mojo.servicedocgen.plugin.version>
+    <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
+    <maven.javadoc.plugin.version>3.6.0</maven.javadoc.plugin.version>
+    <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
+    <!--<maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>-->
+    <maven.war.plugin.version>3.4.0</maven.war.plugin.version>
+    <maven.help.plugin.version>3.4.0</maven.help.plugin.version>
+    <maven.gpg.plugin.version>3.1.0</maven.gpg.plugin.version>
+    <mojo.flatten.plugin.version>1.5.0</mojo.flatten.plugin.version>
+    <mojo.license.plugin.version>2.2.0</mojo.license.plugin.version>
     <mojo.exec.plugin.version>3.1.0</mojo.exec.plugin.version>
-    <sonar.maven.plugin.version>3.9.1.2184</sonar.maven.plugin.version>
-    <owasp.dependency.check.plugin.version>8.1.2</owasp.dependency.check.plugin.version>
+    <sonar.maven.plugin.version>3.10.0.2594</sonar.maven.plugin.version>
+    <owasp.dependency.check.plugin.version>8.4.0</owasp.dependency.check.plugin.version>
   </properties>
 
   <dependencies>
