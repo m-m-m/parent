@@ -24,6 +24,8 @@
     -->
     <revision>0.0-SNAPSHOT</revision>
     <java.version>11</java.version>
+    <maven.compiler.fork>true</maven.compiler.fork>
+    <maven.compiler.release>${java.version}</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <logback.version>1.4.5</logback.version>
@@ -196,18 +198,6 @@
           <encoding>${project.build.sourceEncoding}</encoding>
           <includeEmptyDirs>true</includeEmptyDirs>
         </configuration>
-      </plugin>
-
-      <!-- configure java compiler -->
-      <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-compiler-plugin</artifactId>
-         <configuration>
-           <encoding>${project.build.sourceEncoding}</encoding>
-           <source>${java.version}</source>
-           <target>${java.version}</target>
-           <fork>true</fork>
-         </configuration>
       </plugin>
 
       <!-- advanced manifests -->
