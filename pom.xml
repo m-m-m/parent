@@ -34,9 +34,6 @@
     <githuib.organization>m-m-m</githuib.organization>
     <githuib.repository>parent</githuib.repository>
     <github.default.branch>master</github.default.branch>
-    <maven.deploy.repository>https://s01.oss.sonatype.org</maven.deploy.repository>
-    <maven.deploy.release.repository>${maven.deploy.repository}/service/local/staging/deploy/maven2/</maven.deploy.release.repository>
-    <maven.deploy.snapshot.repository>${maven.deploy.repository}/content/repositories/snapshots/</maven.deploy.snapshot.repository>
     <maven.archetype.version>3.1.2</maven.archetype.version>
     <maven.resources.plugin.version>3.3.0</maven.resources.plugin.version>
     <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
@@ -357,7 +354,7 @@
         <repository>
           <id>ossrh</id>
           <name>OSSRH Snapshots</name>
-          <url>${maven.deploy.snapshot.repository}</url>
+          <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
           <snapshots>
             <enabled>true</enabled>
           </snapshots>
@@ -385,12 +382,12 @@
     <repository>
       <id>deploy</id>
       <name>MMM Staging Repository</name>
-      <url>${maven.deploy.release.repository}</url>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
     <snapshotRepository>
       <id>deploy</id>
       <name>mmm snapshot repository</name>
-      <url>${maven.deploy.snapshot.repository}</url>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
