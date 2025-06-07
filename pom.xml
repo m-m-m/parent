@@ -54,6 +54,7 @@
     <mojo.exec.plugin.version>3.4.0</mojo.exec.plugin.version>
     <sonar.maven.plugin.version>4.0.0.4121</sonar.maven.plugin.version>
     <owasp.dependency.check.plugin.version>9.2.0</owasp.dependency.check.plugin.version>
+    <argLine/>
   </properties>
 
   <dependencyManagement>
@@ -160,6 +161,7 @@
           <configuration>
             <!-- Surefire changed the default to the project.build.directory causing trouble with file paths to test resources -->
             <workingDirectory>${basedir}</workingDirectory>
+            <argLine>@{argLine}</argLine>
           </configuration>
         </plugin>
         <plugin>
@@ -381,19 +383,6 @@
     <url>https://github.com/${githuib.organization}/${githuib.repository}/tree/${github.default.branch}</url>
     <tag/>
   </scm>
-
-  <distributionManagement>
-    <repository>
-      <id>deploy</id>
-      <name>MMM Staging Repository</name>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-    <snapshotRepository>
-      <id>deploy</id>
-      <name>mmm snapshot repository</name>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
 
   <organization>
     <name>mmm-team</name>
