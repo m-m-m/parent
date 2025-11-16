@@ -35,7 +35,7 @@
     <mmm.flatten.updatePom>true</mmm.flatten.updatePom>
     <githuib.organization>m-m-m</githuib.organization>
     <githuib.repository>parent</githuib.repository>
-    <github.default.branch>master</github.default.branch>
+    <github.default.branch>main</github.default.branch>
     <maven.archetype.version>3.2.1</maven.archetype.version>
     <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
     <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
