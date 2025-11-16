@@ -28,32 +28,32 @@
     <maven.compiler.release>${java.version}</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <logback.version>1.5.18</logback.version>
-    <junit.version>5.12.2</junit.version>
-    <assertj.version>3.27.3</assertj.version>
+    <logback.version>1.5.21</logback.version>
+    <junit.version>6.0.1</junit.version>
+    <assertj.version>3.27.6</assertj.version>
     <mmm.flatten.mode>bom</mmm.flatten.mode>
     <mmm.flatten.updatePom>true</mmm.flatten.updatePom>
     <githuib.organization>m-m-m</githuib.organization>
     <githuib.repository>parent</githuib.repository>
     <github.default.branch>main</github.default.branch>
-    <maven.archetype.version>3.2.1</maven.archetype.version>
+    <maven.archetype.version>3.4.1</maven.archetype.version>
     <maven.resources.plugin.version>3.3.1</maven.resources.plugin.version>
-    <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
-    <maven.install.plugin.version>3.1.2</maven.install.plugin.version>
-    <maven.deploy.plugin.version>3.1.2</maven.deploy.plugin.version>
-    <maven.clean.plugin.version>3.4.0</maven.clean.plugin.version>
-    <maven.jar.plugin.version>3.4.2</maven.jar.plugin.version>
+    <maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
+    <maven.install.plugin.version>3.1.4</maven.install.plugin.version>
+    <maven.deploy.plugin.version>3.1.4</maven.deploy.plugin.version>
+    <maven.clean.plugin.version>3.5.0</maven.clean.plugin.version>
+    <maven.jar.plugin.version>3.5.0</maven.jar.plugin.version>
     <maven.source.plugin.version>3.3.1</maven.source.plugin.version>
-    <maven.javadoc.plugin.version>3.8.0</maven.javadoc.plugin.version>
+    <maven.javadoc.plugin.version>3.12.0</maven.javadoc.plugin.version>
     <maven.surefire.plugin.version>3.5.4</maven.surefire.plugin.version>
-    <maven.war.plugin.version>3.4.0</maven.war.plugin.version>
-    <maven.help.plugin.version>3.4.1</maven.help.plugin.version>
-    <maven.gpg.plugin.version>3.2.4</maven.gpg.plugin.version>
+    <maven.war.plugin.version>3.5.0</maven.war.plugin.version>
+    <maven.help.plugin.version>3.5.1</maven.help.plugin.version>
+    <maven.gpg.plugin.version>3.2.8</maven.gpg.plugin.version>
     <mojo.flatten.plugin.version>1.6.0</mojo.flatten.plugin.version>
     <mojo.license.plugin.version>2.4.0</mojo.license.plugin.version>
-    <mojo.exec.plugin.version>3.4.0</mojo.exec.plugin.version>
-    <sonar.maven.plugin.version>4.0.0.4121</sonar.maven.plugin.version>
-    <owasp.dependency.check.plugin.version>9.2.0</owasp.dependency.check.plugin.version>
+    <mojo.exec.plugin.version>3.6.2</mojo.exec.plugin.version>
+    <sonar.maven.plugin.version>5.3.0.6276</sonar.maven.plugin.version>
+    <owasp.dependency.check.plugin.version>12.1.9</owasp.dependency.check.plugin.version>
     <argLine/>
   </properties>
 
