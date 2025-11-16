@@ -151,7 +151,7 @@
             <doclint>none</doclint>
             <doctitle>JavaDocs for ${project.name} ${project.version}</doctitle>
             <windowtitle>JavaDocs for ${project.name} ${project.version}</windowtitle>
-            <additionalOptions>--allow-script-in-comments --enable-preview</additionalOptions>
+            <additionalOptions>--allow-script-in-comments</additionalOptions>
           </configuration>
         </plugin>
         <plugin>
