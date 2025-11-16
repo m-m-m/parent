@@ -50,7 +50,7 @@
     <maven.help.plugin.version>3.5.1</maven.help.plugin.version>
     <maven.gpg.plugin.version>3.2.8</maven.gpg.plugin.version>
     <mojo.flatten.plugin.version>1.6.0</mojo.flatten.plugin.version>
-    <mojo.license.plugin.version>2.4.0</mojo.license.plugin.version>
+    <mojo.license.plugin.version>2.7.0</mojo.license.plugin.version>
     <mojo.exec.plugin.version>3.6.2</mojo.exec.plugin.version>
     <sonar.maven.plugin.version>5.3.0.6276</sonar.maven.plugin.version>
     <owasp.dependency.check.plugin.version>12.1.9</owasp.dependency.check.plugin.version>
