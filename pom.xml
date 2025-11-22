@@ -26,6 +26,9 @@
     <java.version>21</java.version>
     <maven.compiler.fork>true</maven.compiler.fork>
     <maven.compiler.release>${java.version}</maven.compiler.release>
+    <maven.central.skip.publishing>false</maven.central.skip.publishing>
+    <maven.central.exclude.artifacts></maven.central.exclude.artifacts>
+    <maven.central.ignore.published.components>false</maven.central.ignore.published.components>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <logback.version>1.5.21</logback.version>
@@ -281,6 +284,9 @@
         <configuration>
           <publishingServerId>central</publishingServerId>
           <autoPublish>true</autoPublish>
+          <skipPublishing>${maven.central.skip.publishing}</skipPublishing>
+          <excludeArtifacts>${maven.central.exclude.artifacts}</excludeArtifacts>
+          <ignorePublishedComponents>${maven.central.ignore.published.components}</ignorePublishedComponents>
         </configuration>
       </plugin>
 
