@@ -21,4 +21,4 @@ jobs:
         env:
           SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
           SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
-        run: mvn -B -ntp -Dstyle.color=always install --settings .mvn/settings.xml -DskipTests=true -Dmaven.install.skip=true deploy
+        run: mvn -B -ntp -Dstyle.color=always --settings .mvn/settings.xml -DskipTests=true -Dmaven.install.skip=true deploy
